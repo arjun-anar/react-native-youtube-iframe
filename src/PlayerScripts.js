@@ -179,7 +179,9 @@ export const MAIN_SCRIPT = (
   </head>
   <body>
     <div class="container">
-      <div class="video" id="player" />
+      <iframe id="player" type="text/html" width="390" height="640"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+  frameborder="0"></iframe>
     </div>
 
     <script>
