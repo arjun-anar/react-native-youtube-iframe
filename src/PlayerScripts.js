@@ -78,8 +78,6 @@ export const soundMode = {
 };
 
 export const MAIN_SCRIPT = (
-  height,
-  width,
   videoId,
   playList,
   initialPlayerParams,
@@ -194,8 +192,6 @@ export const MAIN_SCRIPT = (
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          width: '${width}',
-          height: '${height}',
           videoId: '${videoId_s}',
           playerVars: {
             ${listParam}
