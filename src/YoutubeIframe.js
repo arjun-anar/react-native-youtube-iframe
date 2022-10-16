@@ -226,6 +226,8 @@ const YoutubeIframe = (props, ref) => {
 
   const source = useMemo(() => {
     const ytScript = MAIN_SCRIPT(
+      height,
+      width,
       lastVideoIdRef.current,
       lastPlayListRef.current,
       initialPlayerParamsRef.current,
@@ -245,7 +247,14 @@ const YoutubeIframe = (props, ref) => {
     const data = ytScript.urlEncodedJSON;
 
     return {uri: base + '?data=' + data};
-  }, [useLocalHTML, contentScale, baseUrlOverride, allowWebViewZoom]);
+  }, [
+    height,
+    width,
+    useLocalHTML,
+    contentScale,
+    baseUrlOverride,
+    allowWebViewZoom,
+  ]);
 
   return (
     <View style={{height, width}}>
