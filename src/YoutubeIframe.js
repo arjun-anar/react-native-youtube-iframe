@@ -280,7 +280,7 @@ const YoutubeIframe = (props, ref) => {
         // --
 
         // add props that should not be allowed to be overridden below
-        source={source}
+        source={'https://www.youtube.com/embed/' + videoId}
         ref={webViewRef}
         onMessage={onWebMessage}
       />
